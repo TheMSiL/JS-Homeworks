@@ -37,13 +37,14 @@ function showGreeting () {
 showGreeting ();
 
 
-                                                                    Second Exercise
+                                                                    // Second Exercise
 
 
 function getExponent(number, exponent = 2) {
     return number ** exponent;
 }
 
-getExponent (12, 4);
-getExponent (12);
+alert(getExponent(12,2));
+alert(getExponent(12));
+alert(getExponent(16,4));
 
