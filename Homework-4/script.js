@@ -24,8 +24,8 @@ let userName = prompt('Вкажіть ваше ім’я');
 let userAge = prompt('Вкажіть ваш вік');
 
 function showGreeting () {
-   let firstGreeting = 'Привіт,' + ' ' + userName;
-   let secondGreeting = 'Добрий день,' + ' ' + userName;
+   let firstGreeting = 'Привіт, ' + userName;
+   let secondGreeting = 'Добрий день, ' + userName;
 
    if (userAge >= 30) {
     alert(secondGreeting);
