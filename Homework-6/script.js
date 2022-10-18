@@ -4,8 +4,8 @@ const authorize = () => {
 
 let userData;
 let userPassword;
-let spaceIndex;
 let authorizeSuccess = false;
+let spaceIndex;
 
 
 do {
@@ -15,7 +15,7 @@ do {
         alert('Введите ваши данные');
         continue
     } else {
-        alert ('Ваши данные сохранены');
+        alert('Ваши данные сохранены');
     }
 
     spaceIndex = userData.indexOf(' ');
@@ -34,25 +34,24 @@ do {
         continue
                                     // чуть-чуть улучшил условие, чисто для проверки содержит ли чисто цифры
     } else {
-        alert ('Ваш пароль сохранен!');
-        break
+        alert ('Ваш пароль сохранен');
     }
     
+    const showFixUserData = (userData) => {
+        let userName = userData.slice(0, spaceIndex);
+        let userNameFix = userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+        let userSurname = userData.slice(spaceIndex + 1);
+        let userSurnameFix = userSurname.charAt(0).toUpperCase() + userSurname.slice(1).toLowerCase();
     
+        alert (`Добро пожаловать, ${userNameFix} ${userSurnameFix}!`);
+    }
+    
+    showFixUserData(userData);
+    break
+
 } while (!authorizeSuccess);
 
-const showFixUserData = (userData) => {
-    let userName = userData.slice(0, spaceIndex);
-    let userNameFix = userName.chartAT(0).toUpperCase() + userName.slice(1).toLowerCase();
-    let userSurname = userData.slice(spaceIndex + 1);
-    let userSurnameFix = userSurname.chartAT(0).toUpperCase() + userSurname.slice(1).toLowerCase();
 
-    
-
-    alert (`Добро пожаловать, ${userNameFix} ${userSurnameFix}!`);
-}
-
-showFixUserData();
 
 }
 
