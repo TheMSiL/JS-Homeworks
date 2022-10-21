@@ -1,28 +1,30 @@
                                  // !Первое задание
-let timetable = {};
-
+                                 
 function getTimetable () {
 
+let timetable = {};
 let time;
 let task;
-
+let end = false;
 do {
+   
    time = prompt ('time');
    task = prompt ('task');
 
-   if (time !== null || task !== null) {
-      timetable[time] = task;
-      continue
+   if (time == null || task == null) {
+     end = true
    } else {
-      break
+      timetable[time] = task;
    }
    
-} while (time !== null || task !== null)
-   
-   console.log(timetable);
-   // *console.log(Object.keys(timetable), timetable[time]);  - fail.
+} while (!end)
+
+return timetable
    
 }
+
+let shedule = getTimetable();
+console.log(shedule);
 
 getTimetable ();
 
