@@ -7,7 +7,7 @@ function getNumber (arr) {
 
 let num = 0;
 for (let truth of arr) {
-   if (truth = truth) { // (truth === true)
+   if (truth === true)  {  
       num++
    }
 }
@@ -20,7 +20,6 @@ getNumber([]);
 
                                                       // !Второе задание
 
-let array = [];
 let object = {};
 function getOccurrencesCount (array) {
    for (let elem of array) {
