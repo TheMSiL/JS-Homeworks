@@ -160,18 +160,26 @@ const data = [
  ];
  
 
-const filterData = (arr, objectToSearch) => {
-   let result = arr.filter(item => {
+ const filterData = ((array, obj) => {
+   for (let key in obj) {
+      array = array.filter((argument) => argument[key] === obj[key])
+   }
+   return array
+})
+
+const result = filterData(data, { age: 19, position: "junior" });
+console.log(result);
+
+
+// const filterData = (arr, objectToSearch) => {
+//    let result = arr.filter(item => {
       
-      return Object.keys(objectToSearch).every(key => {
-         return item[key] === objectToSearch[key]
-      })
-   })
-   return result
-}
+//       return Object.keys(objectToSearch).every(key => {
+//          return item[key] === objectToSearch[key]
+//       })
+//    })
+//    return result
+// }
 
-console.log(filterData (data, {age: 19, position: "junior"})); 
-
-
-
+// console.log(filterData (data, {age: 19, position: "junior"})); 
 
