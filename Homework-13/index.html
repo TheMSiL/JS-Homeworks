@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework-13</title>
+</head>
+
+<body>
+  <style>
+    body {
+      background-image: url(./images/background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .none {
+      display: none;
+    }
+
+    .slider {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+
+    .images {
+      text-align: center;
+    }
+
+    .img {
+      max-width: 25%;
+    }
+
+    #prev,
+    #next {
+      display: inline-block;
+      margin-top: 15px;
+      width: 60px;
+      height: 30px;
+      border-radius: 45px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      color: #524f4e;
+      border: none;
+      background: white;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+      transition: .3s;
+    }
+
+    #prev:hover,
+    #next:hover {
+      background: #2d5ee6;
+      box-shadow: 0 15px 20px rgba(37, 34, 235, 0.4);
+      text-align: left;
+      color: yellow;
+      transform: translateY(-7px);
+    }
+
+    #next {
+      margin-left: 15px;
+    }
+
+    #next:hover {
+      text-align: right;
+    }
+  </style>
+  <div class="slider">
+    <div class="images">
+      <img id="img1" src="./images/1.jpg" alt="1" class="img">
+      <img id="img2" src="./images/2.jpg" alt="2" class="img">
+      <img id="img3" src="./images/3.jpg" alt="3" class="img">
+      <img id="img4" src="./images/4.jpg" alt="4" class="img">
+      <img id="img5" src="./images/5.jpg" alt="5" class="img">
+      <img id="img6" src="./images/6.jpg" alt="6" class="img">
+      <img id="img7" src="./images/7.jpg" alt="7" class="img">
+    </div>
+    <button id="prev">
+      &#11013
+    </button>
+    <button id="next">
+      &#10145
+    </button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
